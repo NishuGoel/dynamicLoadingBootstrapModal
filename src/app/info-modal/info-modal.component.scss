@@ -1,0 +1,29 @@
+.bodyyy{
+    background-color: black;
+}
+
+.info-modal-sm {
+    .modal-content {
+        width: 250px;
+    }
+    .modal-body {
+        padding: 15px;
+    }
+    .content-text {
+        font-size: 14px;
+        color: #525759;
+        margin: 0;
+    }
+    .button-container {
+        .modal-body-button {
+            &--secondary {
+                background: #fff;
+                color: #018b46;
+            }
+            &--primary {
+                background-color: #018b46;
+                color: #fff;
+            }
+        }
+    }
+}

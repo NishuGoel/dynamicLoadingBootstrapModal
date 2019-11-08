@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InfoModalComponent } from './info-modal/info-modal.component';
+import { RenderInfoModalComponent } from './render-info-modal/render-info-modal.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModalModule, NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InfoModalComponent,
+    RenderInfoModalComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, CommonModule,
+    AppRoutingModule, FormsModule, NgbModalModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    NgbActiveModal
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [InfoModalComponent]
 })
 export class AppModule { }

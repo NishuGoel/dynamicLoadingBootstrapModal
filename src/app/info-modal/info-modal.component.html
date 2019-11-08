@@ -1,0 +1,12 @@
+<section class="bodyyy">
+    <div class="modal-body">
+        <p *ngIf="modalData?.modalContent" class="content-text text-center">{{modalData.modalContent}}</p>
+        <div class="button-container">
+            <button *ngIf="modalData?.primaryButton?.showButton" (click)="emitUserApprovalStatus()"
+                class="btn modal-body-button modal-body-button--primary">{{modalData.primaryButton.buttonText}}</button>
+            &nbsp;
+            <button *ngIf="modalData?.secondaryButton?.showButton" (click)="dismissModal()"
+                class="btn modal-body-button modal-body-button--secondary">{{modalData.secondaryButton.buttonText}}</button>
+        </div>
+    </div>
+</section>
